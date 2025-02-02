@@ -1,0 +1,30 @@
+name: mytailor
+description: "A new Flutter project."
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  infinite_carousel: ^1.1.1
+  animated_button: ^0.2.0
+  select_card: ^0.0.9
+  provider: ^6.0.5
+  flutter_styled_toast: ^2.2.1
+  quickalert: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+     - assets/test_cloth.jpeg
+     - assets/female_measurements.png
+     - assets/cat/
