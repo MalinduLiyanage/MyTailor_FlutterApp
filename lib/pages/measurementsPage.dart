@@ -78,6 +78,24 @@ class _MeasurePageState extends State<MeasurePage> {
                 context
                     .read<UserDetailsProvider>()
                     .updateDetail('body', _bodyController.text);
+                context
+                    .read<UserDetailsProvider>()
+                    .updateDetail('chest', _chestController.text);
+                context
+                    .read<UserDetailsProvider>()
+                    .updateDetail('waist', _waistController.text);
+                context
+                    .read<UserDetailsProvider>()
+                    .updateDetail('hip', _hipController.text);
+                context
+                    .read<UserDetailsProvider>()
+                    .updateDetail('thigh', _thighController.text);
+                context
+                    .read<UserDetailsProvider>()
+                    .updateDetail('sleeveLen', _sleeveController.text);
+                context
+                    .read<UserDetailsProvider>()
+                    .updateDetail('legLen', _legController.text);
 
                 // Navigate to next page or pop depending on isHome
                 if (widget.isHome == false) {
