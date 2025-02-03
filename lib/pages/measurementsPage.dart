@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:mytailor/pages/fabricPage.dart';
 import 'package:mytailor/changenotifiers/user.dart';
 import 'package:provider/provider.dart';
-import 'package:quickalert/quickalert.dart';
 
 class MeasurePage extends StatefulWidget {
   final bool isHome;
