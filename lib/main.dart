@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mytailor/pages/homePage.dart';
 import 'package:provider/provider.dart';
-import 'package:mytailor/changenotifiers/user.dart'; // Import your provider file
+import 'package:mytailor/changenotifiers/user.dart';
 
 void main() {
   runApp(

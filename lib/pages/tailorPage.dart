@@ -73,7 +73,7 @@ class _TailorPageState extends State<TailorPage> {
                           fit: BoxFit.cover,
                           loadingBuilder: (context, child, loadingProgress) {
                             if (loadingProgress == null) {
-                              return child; // Image is loaded, return the image
+                              return child;
                             } else {
                               return Center(
                                 child: CircularProgressIndicator(
@@ -84,7 +84,7 @@ class _TailorPageState extends State<TailorPage> {
                                               1)
                                       : null,
                                 ),
-                              ); // Show loading overlay
+                              );
                             }
                           },
                         ),

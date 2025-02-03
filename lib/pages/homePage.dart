@@ -47,9 +47,9 @@ class _HomePageState extends State<HomePage> {
             child: Text(
               "MY TAILOR",
               style: TextStyle(
-                fontSize: 24, // Bigger text size
-                fontWeight: FontWeight.bold, // Bold text (optional)
-                letterSpacing: 2.0, // Space between letters
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2.0,
               ),
             ),
           ),
@@ -61,12 +61,12 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 Align(
-                  alignment: Alignment.centerLeft, // Aligns text to the left
+                  alignment: Alignment.centerLeft,
                   child: Text(
                     "CATEGORIES",
                     style: TextStyle(
-                      fontSize: 18, // Adjust size as needed
-                      fontWeight: FontWeight.w500, // Medium weight (optional)
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -74,7 +74,6 @@ class _HomePageState extends State<HomePage> {
                   height: 5,
                 ),
                 SizedBox(
-                  // ✅ Add a defined height
                   height: 150,
                   child: InfiniteCarousel.builder(
                     itemCount: catUrls.length,
@@ -115,25 +114,22 @@ class _HomePageState extends State<HomePage> {
                                 child: Image.asset(
                                   catUrls[itemIndex],
                                   fit: BoxFit.cover,
-                                  width: double
-                                      .infinity, // Ensure it takes full width
-                                  height: double
-                                      .infinity, // Ensure it takes full height
+                                  width: double.infinity,
+                                  height: double.infinity,
                                 ),
                               ),
                               Positioned(
-                                bottom: 8, // You can adjust this position
-                                left: 8, // You can adjust this position
+                                bottom: 8,
+                                left: 8,
                                 child: Container(
                                   padding: EdgeInsets.symmetric(
                                       horizontal: 8, vertical: 4),
-                                  color: Colors
-                                      .black54, // Background color of text box
+                                  color: Colors.black54,
                                   child: Text(
                                     catUrls[itemIndex]
                                         .replaceFirst('assets/cat/', '')
                                         .split('.')
-                                        .first, // You can customize the text
+                                        .first,
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
@@ -309,12 +305,12 @@ class _HomePageState extends State<HomePage> {
                   height: 5,
                 ),
                 Align(
-                  alignment: Alignment.centerLeft, // Aligns text to the left
+                  alignment: Alignment.centerLeft,
                   child: Text(
                     "RECENT CHOICES",
                     style: TextStyle(
-                      fontSize: 18, // Adjust size as needed
-                      fontWeight: FontWeight.w500, // Medium weight (optional)
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -357,7 +353,7 @@ class _HomePageState extends State<HomePage> {
                                   loadingBuilder:
                                       (context, child, loadingProgress) {
                                     if (loadingProgress == null) {
-                                      return child; // Image is loaded, return the image
+                                      return child;
                                     } else {
                                       return Center(
                                         child: CircularProgressIndicator(
@@ -371,7 +367,7 @@ class _HomePageState extends State<HomePage> {
                                                       1)
                                               : null,
                                         ),
-                                      ); // Show loading overlay
+                                      );
                                     }
                                   },
                                 ),

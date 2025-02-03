@@ -11,7 +11,6 @@ class OrderPage extends StatefulWidget {
 }
 
 class _OrderPageState extends State<OrderPage> {
-  // Controllers for input fields
   final TextEditingController _streetController = TextEditingController();
   final TextEditingController _cityController = TextEditingController();
   final TextEditingController _postalController = TextEditingController();
@@ -19,7 +18,6 @@ class _OrderPageState extends State<OrderPage> {
   final TextEditingController _expiryController = TextEditingController();
   final TextEditingController _cvvController = TextEditingController();
 
-  // Function to check if all fields are filled
   bool _validateInputs() {
     if (_streetController.text.isEmpty ||
         _cityController.text.isEmpty ||
@@ -90,7 +88,6 @@ class _OrderPageState extends State<OrderPage> {
           padding: EdgeInsets.all(16.0),
           child: Column(
             children: [
-              // Order Details Section
               Card(
                 elevation: 5,
                 margin: EdgeInsets.only(bottom: 16),
@@ -128,7 +125,6 @@ class _OrderPageState extends State<OrderPage> {
                 ),
               ),
 
-              // Shipping Address Section
               buildInputCard("Shipping Address", [
                 buildTextField("Street Address", _streetController),
                 buildTextField("City", _cityController),
@@ -169,14 +165,13 @@ class _OrderPageState extends State<OrderPage> {
               ),
             ),
             SizedBox(height: 8),
-            ...fields, // Insert text fields dynamically
+            ...fields,
           ],
         ),
       ),
     );
   }
 
-  // Reusable Text Field
   Widget buildTextField(String label, TextEditingController controller,
       {TextInputType keyboardType = TextInputType.text,
       bool isObscure = false}) {

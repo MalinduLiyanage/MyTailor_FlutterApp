@@ -48,7 +48,6 @@ class UserDetailsProvider extends ChangeNotifier {
       case 'button':
         _userDetails = _userDetails.copyWith(button: value);
         break;
-      // Added cases for the new measurements
       case 'body':
         _userDetails = _userDetails.copyWith(body: value);
         break;

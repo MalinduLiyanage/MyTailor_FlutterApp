@@ -10,8 +10,6 @@ class UserDetails {
   String? hem;
   String? seam;
   String? button;
-
-  // New measurements
   String? body;
   String? chest;
   String? waist;
@@ -43,7 +41,6 @@ class UserDetails {
     this.fabric,
   });
 
-  // Copy constructor for creating a new UserDetails instance
   UserDetails copyWith({
     String? apparel,
     String? collar,

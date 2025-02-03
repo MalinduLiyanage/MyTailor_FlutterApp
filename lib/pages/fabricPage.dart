@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mytailor/pages/orderPage.dart';
 import 'package:provider/provider.dart';
-import 'package:select_card/select_card.dart'; // Make sure to import this package
 import 'package:mytailor/changenotifiers/user.dart';
 
 class FabricPage extends StatefulWidget {
-  final bool isHome; // Declare the variable
+  final bool isHome;
   const FabricPage(this.isHome, {super.key});
 
   @override
@@ -13,12 +12,11 @@ class FabricPage extends StatefulWidget {
 }
 
 class _FabricPageState extends State<FabricPage> {
-  String? selectedFabric; // Track the selected fabric
+  String? selectedFabric;
 
   @override
   void initState() {
     super.initState();
-    // Fetch the saved fabric from UserDetailsProvider
     selectedFabric = context.read<UserDetailsProvider>().userDetails.fabric;
   }
 
@@ -84,15 +82,14 @@ class _FabricPageState extends State<FabricPage> {
       child: GestureDetector(
         onTap: () {
           setState(() {
-            selectedFabric = title; // Update selected fabric
+            selectedFabric = title;
           });
           context.read<UserDetailsProvider>().updateDetail('fabric', title);
         },
         child: Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color:
-                isSelected ? Colors.blue : Colors.white, // Highlight selection
+            color: isSelected ? Colors.blue : Colors.white,
             border: Border.all(color: isSelected ? Colors.blue : Colors.grey),
             borderRadius: BorderRadius.circular(10),
             boxShadow: [

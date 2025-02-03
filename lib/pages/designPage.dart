@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mytailor/pages/measurementsPage.dart';
 import 'package:mytailor/changenotifiers/user.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 
 class DesignPage extends StatefulWidget {
   const DesignPage({super.key});
